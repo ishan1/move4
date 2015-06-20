@@ -11,7 +11,7 @@
         <field name="ACTION">FLASH</field>
         <value name="LED">
           <block type="math_number" id="160">
-            <field name="NUM">0</field>
+            <field name="NUM">4</field>
           </block>
         </value>
         <next>
@@ -19,16 +19,26 @@
             <field name="ACTION">FLASH</field>
             <value name="LED">
               <block type="math_number" id="161">
-                <field name="NUM">4</field>
+                <field name="NUM">1</field>
               </block>
             </value>
             <next>
-              <block type="robot_delay" id="61" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="162">
-                    <field name="NUM">200</field>
+              <block type="led_select" id="163" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="164">
+                    <field name="NUM">2</field>
                   </block>
                 </value>
+                <next>
+                  <block type="robot_delay" id="61" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="162">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
