@@ -1,76 +1,35 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="171" inline="false" x="-6" y="-153">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="178">
-        <field name="OBJECT">ENTER</field>
+  <block type="controls_repeat" id="76" inline="true" x="308" y="61">
+    <value name="TIMES">
+      <block type="math_number" id="77">
+        <field name="NUM">4</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_leftmotor" id="229" inline="true">
-        <value name="MOVLEFT">
-          <block type="math_arithmetic" id="264" inline="true">
-            <field name="OP">MULTIPLY</field>
-            <value name="A">
-              <block type="math_arithmetic" id="249" inline="true">
-                <field name="OP">MINUS</field>
-                <value name="A">
-                  <block type="math_random" id="272"></block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="256">
-                    <field name="NUM">50</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="265">
-                <field name="NUM">2</field>
-              </block>
-            </value>
-          </block>
-        </value>
+      <block type="movement_forward" id="10">
         <next>
-          <block type="movement_rightmotor" id="240" inline="true">
-            <value name="MOVRIGHT">
-              <block type="math_arithmetic" id="273" inline="true">
-                <field name="OP">MULTIPLY</field>
-                <value name="A">
-                  <block type="math_arithmetic" id="274" inline="true">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <block type="math_random" id="275"></block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="276">
-                        <field name="NUM">50</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="277">
-                    <field name="NUM">2</field>
-                  </block>
-                </value>
+          <block type="robot_delay" id="22" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="29">
+                <field name="NUM">1000</field>
               </block>
             </value>
             <next>
-              <block type="robot_delay" id="242" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="278">
-                    <field name="NUM">750</field>
+              <block type="movement_right" id="39">
+                <next>
+                  <block type="robot_delay" id="41" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="54">
+                        <field name="NUM">4000</field>
+                      </block>
+                    </value>
                   </block>
-                </value>
+                </next>
               </block>
             </next>
           </block>
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="288"></block>
-    </next>
   </block>
 </xml>
