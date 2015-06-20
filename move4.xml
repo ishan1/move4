@@ -1,38 +1,39 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="7" inline="true" x="-37" y="-101">
-    <value name="TIMES">
-      <block type="math_number" id="14">
-        <field name="NUM">4</field>
+  <block type="controls_whileUntil" id="85" inline="false" x="-158" y="-137">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="68">
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="24">
+      <block type="led_select" id="152" inline="true">
+        <field name="ACTION">FLASH</field>
+        <value name="LED">
+          <block type="math_number" id="160">
+            <field name="NUM">0</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="26" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="38">
-                <field name="NUM">1300</field>
+          <block type="led_select" id="153" inline="true">
+            <field name="ACTION">FLASH</field>
+            <value name="LED">
+              <block type="math_number" id="161">
+                <field name="NUM">5</field>
               </block>
             </value>
             <next>
-              <block type="movement_right" id="36">
-                <next>
-                  <block type="robot_delay" id="37" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="39">
-                        <field name="NUM">1300</field>
-                      </block>
-                    </value>
+              <block type="robot_delay" id="61" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="162">
+                    <field name="NUM">200</field>
                   </block>
-                </next>
+                </value>
               </block>
             </next>
           </block>
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="49"></block>
-    </next>
   </block>
 </xml>
